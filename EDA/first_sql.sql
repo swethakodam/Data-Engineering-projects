@@ -55,4 +55,4 @@ ON jpf.company_id= cd.company_id;
 SELECT name, AVG(Marks) FROM Students
 
 GROUP BY name
-HAVING AVG(Marks) > 75;
+HAVING AVG(Marks) > 80;
