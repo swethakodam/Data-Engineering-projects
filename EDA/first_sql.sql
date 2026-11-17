@@ -56,3 +56,23 @@ SELECT name, AVG(Marks) FROM Students
 
 GROUP BY name
 HAVING AVG(Marks) > 80;
+
+
+SELECT *
+FROM information_schema.columns;
+DESCRIBE job_postings_fact;
+
+
+SELECT 
+CAST(job_work_from_home AS INT),
+CAST(company_id AS float),
+salary_hour_avg, salary_year_avg,
+-- (CAST(salary_year_avg AS varchar) || CAST(salary_hour_avg AS varchar)) AS combine
+FROM job_postings_fact;
+--WHERE (CAST(salary_year_avg AS varchar) || CAST(salary_hour_avg AS varchar)) is Not NULL;
+
+
+-- duckdb -c "ATTACH 'md:data_jobs'; ATTACH 'Shopping_mall.duckdb' AS local_db; COPY FROM DATABASE data_jobs TO local_db;"
+
+
+
