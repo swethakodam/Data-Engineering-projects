@@ -9,6 +9,6 @@ ON skills_job_dim.skill_id = skills_dim.skill_id
 )
 
 
-SELECT type, MEDIAN(salary_year_avg)
+SELECT type, SUM(salary_year_avg)
 FROM tables
 GROUP BY ALL;
