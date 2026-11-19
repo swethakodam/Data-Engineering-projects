@@ -60,7 +60,7 @@ HAVING AVG(Marks) > 80;
 
 SELECT *
 FROM information_schema.columns;
-DESCRIBE job_postings_fact;
+DESCRIBE data_jobs.job_postings_fact;
 
 
 SELECT 
